@@ -1,3 +1,4 @@
+import LanguageContext from '../../Context'
 import './index.css'
 
 const languageOptions = [
@@ -6,15 +7,15 @@ const languageOptions = [
   {id: 3, value: 'TE', language: 'తెలుగు'},
 ]
 
-const Header = props => {
-  const {activeLanguage, changeLanguage} = props
-
-  const onChangeLanguage = event => {
-    changeLanguage(event.target.value)
-  }
-
-  return (
-    <nav className="nav-header">
+const Header = () => (
+  <LanguageContext.Consumer>
+    {value => {
+      const  {activeLanguage, changeLanguage} = value
+      const onChangeLanguage = event => {
+        changeLanguage(event.target.value)
+      }
+      return (
+      <nav className="nav-header">
       <img
         className="website-logo"
         src="https://assets.ccbp.in/frontend/react-js/windows-logo-img.png"
@@ -32,7 +33,8 @@ const Header = props => {
         ))}
       </select>
     </nav>
-  )
-}
-
+    )
+    }}
+  </LanguageContext.Consumer>
+)
 export default Header
