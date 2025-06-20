@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import LanguageContext from '../../Context'
+=======
+import LanguageContext from '../Context.jsx'
+>>>>>>> ba9a3fe3fa66adc043de41040eed812791dcff02
 import './index.css'
 
 const newWaysToConnectContent = {
@@ -36,9 +40,15 @@ const NewWaysToConnect = () => {
   return (
     <LanguageContext.Consumer>
       {value => {
+<<<<<<< HEAD
         const {activeLanguage} = value
         const {heading, description} = getNewWaysToConnectData(activeLanguage)
         return (
+=======
+        const {activeLanguage} = value;
+        const {heading, description} = getNewWaysToConnectData(activeLanguage)
+        return(
+>>>>>>> ba9a3fe3fa66adc043de41040eed812791dcff02
           <div className="new-ways-to-connect-container">
             <h1 className="new-ways-to-content-heading">{heading}</h1>
             <p className="new-ways-to-content-description">{description}</p>
@@ -46,7 +56,11 @@ const NewWaysToConnect = () => {
         )
       }}
     </LanguageContext.Consumer>
+<<<<<<< HEAD
     
+=======
+  
+>>>>>>> ba9a3fe3fa66adc043de41040eed812791dcff02
   )
 }
 

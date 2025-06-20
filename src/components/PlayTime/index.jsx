@@ -1,4 +1,3 @@
-import LanguageContext from '../../Context'
 import './index.css'
 
 const playtimeContent = {
@@ -34,25 +33,17 @@ const Playtime = () => {
   }
 
   return (
-    <LanguageContext.Consumer>
-      {value => {
-        const {activeLanguage} = value
-        const {heading, description} = getPlaytimeData(activeLanguage)
-        return (<div className="playtime-container">
-          <h1 className="playtime-heading">{heading}</h1>
-          <div className="playtime-description-container">
-            <p className="playtime-description">{description}</p>
-            <img
-              className="playtime-games-image"
-              src="https://assets.ccbp.in/frontend/react-js/gaming-pad-img.png"
-              alt="gaming pad"
-            />
-          </div>
-        </div>
-        )
-      }}
-    </LanguageContext.Consumer>
-    
+    <div className="playtime-container">
+      <h1 className="playtime-heading">{heading}</h1>
+      <div className="playtime-description-container">
+        <p className="playtime-description">{description}</p>
+        <img
+          className="playtime-games-image"
+          src="https://assets.ccbp.in/frontend/react-js/gaming-pad-img.png"
+          alt="gaming pad"
+        />
+      </div>
+    </div>
   )
 }
 

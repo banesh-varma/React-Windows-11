@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import LanguageContext from '../../Context'
+=======
+import LanguageContext from '../Context.jsx'
+>>>>>>> ba9a3fe3fa66adc043de41040eed812791dcff02
 import './index.css'
 
 const landingSectionContent = {
@@ -35,6 +39,7 @@ const LandingSection = () => {
   return (
     <LanguageContext.Consumer>
       {value => {
+<<<<<<< HEAD
         const {activeLanguage} = value
         const {heading, description} = getLandingSectionData(activeLanguage)
         return (
@@ -53,6 +58,26 @@ const LandingSection = () => {
           </div>
         )
       }}
+=======
+        const{activeLanguage} = value
+        const {heading, description} = getLandingSectionData(activeLanguage)
+        return (
+        <div className="bg-container">
+        <div className="responsive-container">
+          <div className="description-container">
+            <h1 className="heading">{heading}</h1>
+            <p className="description">{description}</p>
+          </div>
+          <img
+            className="logo-white"
+            src="https://assets.ccbp.in/frontend/react-js/windows-logo-white-img.png"
+            alt="windows logo"
+          />
+        </div>
+      </div>
+      )
+    }}
+>>>>>>> ba9a3fe3fa66adc043de41040eed812791dcff02
     </LanguageContext.Consumer>
     
   )
